@@ -1,0 +1,125 @@
+<!-- Pertemuan 6 : Point 30 -->
+<!-- 
+Membuat Gallery Heroes:
+
+1. Event MouseEnter dan MouseLeave
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Latihan 2</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 5%
+		}
+
+		img {
+			width: 100%;
+			cursor: pointer;
+			border: 1px solid #edaf50;
+		}
+
+		.item p {
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: bold;
+			color: #fff
+		}
+
+		h3 {
+			text-transform: lowercase;
+			margin-bottom: 0
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<h3><span class="alert-warning">CHAMPIONS</span> FOR EVERY KINGDOM</h3>
+	<p>Use unique and powerful Champions to help defeat the Chaos Legion and enemy Kingdoms.</p>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="row">
+				<div class="col-sm-4 item">
+					<img src="hero/sm-aeria.jpg" alt="Aeria">
+					<p class="bg-warning">Aeria</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-blackheart.jpg" alt="Blackheart">
+					<p class="bg-warning">Blackheart</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-celeste.jpg" alt="Celeste">
+					<p class="bg-warning">Celeste</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-deathbringer.jpg" alt="Deathbringer">
+					<p class="bg-warning">Deathbringer</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-furia.jpg" alt="Furia">
+					<p class="bg-warning">Furia</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-grok.jpg" alt="Grok">
+					<p class="bg-warning">Grok</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-raven.jpg" alt="Raven">
+					<p class="bg-warning">Raven</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-strider.jpg" alt="Strider">
+					<p class="bg-warning">Strider</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-tempest.jpg" alt="Tempest">
+					<p class="bg-warning">Tempest</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-tyrion.jpg" alt="Tyrion">
+					<p class="bg-warning">Tyrion</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-valeon.jpg" alt="Valeon">
+					<p class="bg-warning">Valeon</p>
+				</div>
+				<div class="col-sm-4 item">
+					<img src="hero/sm-valeria.jpg" alt="Valeria">
+					<p class="bg-warning">Valeria</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 item align-self-center big-image">
+			<img src="hero/xl-aeria.jpg" alt="Aeria">
+			<p class="bg-warning">Aeria</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Tulis scriptnya
+	let img = document.querySelectorAll('img');
+	let bigImg = document.querySelector('.big-image');
+	img.forEach((e, i)=>{
+		img[i].style.transition = 'all ease 0.2s';
+		img[i].onmouseenter = () =>{
+			bigImg.childNodes[3].innerHTML = img[i].alt;
+			bigImg.childNodes[1].src = img[i].src;
+			img[i].style.padding = '2px';
+			img[i].style.background = '#f0ad4e';
+		}
+		img[i].onmouseleave = ()=>{
+			img[i].style.padding = 0;
+			img[i].style.background = '#f0ad4e';
+		}
+	})
+
+	
+</script>
+
+</body>
+</html>

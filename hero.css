@@ -1,0 +1,47 @@
+body {
+	font-family: sans-serif !important
+}
+
+#wrapper_hero {
+  height: 800px;
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  background: url(hero/GK-logo.png) no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 110px;
+  margin: 100px auto 0;
+}
+
+#hero {
+  overflow: hidden;
+  width: 100%;
+  height: 800px;
+  background: url(hero/hero-back.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0
+}
+
+#element1 {
+	height: 810px;
+	width: 105%;
+	background: url(hero/hero-middle.png) no-repeat center center;
+	background-size: cover;
+}
+
+#element2 {
+  width: 105%;
+  height: 840px;
+  background: url(hero/hero-front.png) no-repeat center center;
+  background-size: cover;
+}
+
+#element1, #element2 {
+  position: absolute;
+}

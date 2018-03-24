@@ -1,0 +1,40 @@
+#Document Object:
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document/forms
+https://developer.mozilla.org/en-US/docs/Web/API/Document/links
+https://developer.mozilla.org/en-US/docs/Web/API/Document/images
+
+https://developer.mozilla.org/en-US/docs/Web/Events/mousemove
+#Menambahkan event onmousemove: Event terjadi pada saat mouse dipindahkan
+berdasarkan element tertentu.
+
+	1. event.pageX: titik koordinat x
+	2. event.pageY: titik koordinat y
+
+#event.target
+https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+
+#event.target.dataset: custom attribute html (<a href="" data-target="">)
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+
+#offsetLeft: Jarak dari kiri browser
+#offsetTop: Jarak dari atas browser
+
+#Array.from()
+https://developer.mozilla.org/id/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+
+#insertAdjacentElement: Memasukkan sebuah node elemen
+berdasarkan posisi yg ditentukan dan relatif terhadap elemen yg dipanggil/dipilih.
+
+Posisi:
+1. Sebelum elemen itu sendiri (beforebegin)
+2. Tepat didalam elemen sebelum anak pertamanya (afterbegin)
+3. Tepat didalam elemen setelah anak terakhir (beforeend)
+4. Setelah elemen itu sendiri (afterend)
+https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+
+#ParentNode.firstElementChild:
+https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild
+
+#ParentNode.lastElementChild:
+https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild

@@ -1,0 +1,73 @@
+<!-- Pertemuan 7 : Point 30 -->
+<!-- 
+Membuat Add/Remove Input Fields Dynamically
+
+1. Gunakan insertAdjacentElement
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Latihan 4</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+		body {
+			margin: 5% 10%;
+			font-family: sans-serif;
+		}
+
+		button {
+			cursor: pointer;
+		}
+
+		.close {
+			padding: 5px !important
+		}
+	</style>
+</head>
+<body>
+
+<h3>#Pertemuan 6.</h3>
+<p>Masih Seputar Javascript DOM. </p>
+
+<div class="form-group">
+	<button class="btn btn-sm btn-success">+</button>
+</div>
+<div class="form-group form-inline">
+	<input type="text" placeholder="Nama Materi" class="form-control form-control-sm">
+</div>
+
+<button class="btn btn-primary btn-sm">Simpan</button>
+
+<script>
+	// Tulis Scriptnya:
+	let btn = document.querySelectorAll('button');
+	let input = document.querySelector('input');
+	let formInline = document.querySelectorAll('.form-inline');
+	let tambah = `<div class="form-group form-inline">
+					<input type="text" placeholder="Nama Materi" class="form-control form-control-sm">
+					<button class="close">x</button>
+				</div>`;
+	
+	let div = document.createElement('div');
+	div.classList.add('form-group','form-inline');
+
+	let inputBaru = document.createElement('input');
+	inputBaru.classList.add('form-control','form-control-sm');
+	inputBaru.setAttribute('placeholder', 'Nama Materi');
+
+	let btnBaru = document.createElement('button');
+	btnBaru.classList.add('close');
+
+	btn[0].addEventListener('click', () => {
+		// formInline[0].insertAdjacentElement('afterbegin', formInput);
+
+		formInline[0].insertAdjacentElement('afterend', div);
+		div.insertAdjacentElement('beforeend', inputBaru);
+		// btnBaru.insertAdjacentElement('beforeend', inputBaru);
+
+
+	});
+</script>
+</body>
+</html>

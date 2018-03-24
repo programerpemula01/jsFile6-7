@@ -1,0 +1,60 @@
+<!-- Pertemuan 7 : Point 40 -->
+<!-- 
+Membuat Efek Parallax:
+dengan menggabungkan 3 gambar yang ada
+
+1. Menjalankan event mousemove : event.pageX dan event.pageY
+
+2. Gunakan fungsi offsetTop dan offsetLeft
+3. Berikan style css transform: translate3D(x, y, z)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Latihan 1</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="hero.css">
+</head>
+<body>
+
+<div id="wrapper_hero">
+	
+	<div class="title"></div>
+
+	<div id="hero">
+		<div id="element1"></div>
+		<div id="element2"></div>
+	</div>
+	
+</div>
+		
+<script>
+	// Tulis scriptnya:
+
+	var wrapper_hero = document.getElementById('wrapper_hero');
+
+	var hero = document.getElementById('hero');
+	var title = document.querySelector('.title');
+
+	var el1 = document.getElementById('element1');
+	var el2 = document.getElementById('element2');
+
+	wrapper_hero.style.backgroundSize = 'cover';
+	document.onmousemove = (e) => {
+		// title.style.top = -e.pageY / 20 + 'px';
+
+		el1.style.left = -e.pageX / 20 + 'px';
+		el1.style.top = -e.pageY / 100 + 'px';
+
+		el2.style.left = -e.pageX / 50 + 'px';
+		el2.style.top = -e.pageY / 50 + 'px';
+
+		hero.style.top = -e.pageY / 70 + 'px';
+	}
+
+
+</script>
+</body>
+</html>

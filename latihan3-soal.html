@@ -1,0 +1,72 @@
+<!-- Pertemuan 6 : Point 30 -->
+<!-- 
+Membuat Accordion Sederhana:
+
+1. Jika diklik contentnya akan ditampilkan / disembunyikan (toggle)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Latihan 3</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+		body {font-family: sans-serif; margin: 5%}
+		.card-block {
+			padding: 10px
+		}
+
+    .collapsing {
+      overflow: hidden;
+    }
+	</style>
+</head>
+<body>
+
+<h3>#Pertemuan 6.</h3>
+<p>Masih Seputar Javascript DOM.</p>
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="mb-0">
+        <a href="#collapseOne">Collapsible Group Item #1</a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapsing">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="mb-0">
+        <a href="#collapseTwo">Collapsible Group Item #2</a>
+      </h5>
+    </div>
+
+    <div id="collapseTwo" class="collapsing">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	// Tulis Scriptnya:
+  let collapsing = document.querySelectorAll('.collapsing');
+
+  let a = document.querySelectorAll('a');
+  a.forEach((e,i)=>{
+    a[i].onclick = () => {
+      collapsing[i].classList.toggle('collapsing');
+
+    }
+  });
+</script>
+
+</body>
+</html>
