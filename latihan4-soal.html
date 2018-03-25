@@ -38,36 +38,27 @@ Membuat Add/Remove Input Fields Dynamically
 </div>
 
 <button class="btn btn-primary btn-sm">Simpan</button>
-
 <script>
 	// Tulis Scriptnya:
-	let btn = document.querySelectorAll('button');
-	let input = document.querySelector('input');
-	let formInline = document.querySelectorAll('.form-inline');
-	let tambah = `<div class="form-group form-inline">
-					<input type="text" placeholder="Nama Materi" class="form-control form-control-sm">
-					<button class="close">x</button>
-				</div>`;
-	
-	let div = document.createElement('div');
-	div.classList.add('form-group','form-inline');
+	let btn = document.querySelector('.btn-success');
+	let formInline = document.querySelector('.form-inline');
 
-	let inputBaru = document.createElement('input');
-	inputBaru.classList.add('form-control','form-control-sm');
-	inputBaru.setAttribute('placeholder', 'Nama Materi');
+	add = () =>{
+		let div = document.createElement('div');
+		div.innerHTML = `<div class="form-group form-inline">
+							<input type="text" placeholder="Nama Materi" class="form-control form-control-sm">
+							<button class="close">x</button>
+						</div>`;
+		formInline.insertAdjacentElement('afterend', div);
 
-	let btnBaru = document.createElement('button');
-	btnBaru.classList.add('close');
+		let close = document.querySelector('.close');
+		close.onclick = () =>{
+			close.parentElement.remove()
+		}
+	}
 
-	btn[0].addEventListener('click', () => {
-		// formInline[0].insertAdjacentElement('afterbegin', formInput);
+	btn.addEventListener('click', add);
 
-		formInline[0].insertAdjacentElement('afterend', div);
-		div.insertAdjacentElement('beforeend', inputBaru);
-		// btnBaru.insertAdjacentElement('beforeend', inputBaru);
-
-
-	});
 </script>
 </body>
 </html>

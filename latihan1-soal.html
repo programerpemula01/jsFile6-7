@@ -32,18 +32,18 @@ dengan menggabungkan 3 gambar yang ada
 		
 <script>
 	// Tulis scriptnya:
-
 	var wrapper_hero = document.getElementById('wrapper_hero');
+	wrapper_hero.style.backgroundSize = 'cover';
 
 	var hero = document.getElementById('hero');
 	var title = document.querySelector('.title');
+	title.style.position = 'fixed';
+	title.style.left = '40%'
 
 	var el1 = document.getElementById('element1');
 	var el2 = document.getElementById('element2');
 
-	wrapper_hero.style.backgroundSize = 'cover';
 	document.onmousemove = (e) => {
-		// title.style.top = -e.pageY / 20 + 'px';
 
 		el1.style.left = -e.pageX / 20 + 'px';
 		el1.style.top = -e.pageY / 100 + 'px';

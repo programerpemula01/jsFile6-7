@@ -40,11 +40,21 @@ Membuat Form Validation
 // Tulis Script
 
   let input = document.querySelectorAll('input');
+  let err = document.querySelectorAll('.has-error')
 
-
-    if(this.value != ''){
-      input[1].classList.add('alert-danger');
+  input.forEach((e,i)=>{
+    e.onblur = () =>{
+      if(this.value != ''){
+        input[i].classList.add('alert-danger');
+        err[i].innerHTML = "Wajib Di isi";
+      }
     }
+
+    e.focus = () =>{
+      input[i].classList.remove('alert-danger');
+      err[i].remove()
+    }
+  })
 
 </script>
 

@@ -42,6 +42,23 @@ Efek hovernya terdiri dari Merah, Hijau, Biru
 
 <script>
 // Tulis Script.
+	let p = document.querySelector('p');
+	let pChild = p.children;
+
+	let input = document.querySelectorAll('input');
+	input.forEach((e,i)=>{
+		e.addEventListener('change', ()=>{
+			// let timer = setTimeout(()=>{
+				e.parentElement.style.transition = 'all 0.1s';
+				p.className = e.value;
+				e.parentElement.classList.add('p-3',e.value);
+
+			// }
+			// ,100);
+
+		});
+	});
+
 </script>
 </body>
 </html>
