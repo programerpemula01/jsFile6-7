@@ -43,6 +43,9 @@ Membuat Add/Remove Input Fields Dynamically
 	let btn = document.querySelector('.btn-success');
 	let formInline = document.querySelector('.form-inline');
 
+	hapus = function(){ 
+		this.parentElement.remove()
+	}
 	add = () =>{
 		let div = document.createElement('div');
 		div.innerHTML = `<div class="form-group form-inline">
@@ -52,9 +55,7 @@ Membuat Add/Remove Input Fields Dynamically
 		formInline.insertAdjacentElement('afterend', div);
 
 		let close = document.querySelector('.close');
-		close.onclick = () =>{
-			close.parentElement.remove()
-		}
+		close.onclick = hapus
 	}
 
 	btn.addEventListener('click', add);

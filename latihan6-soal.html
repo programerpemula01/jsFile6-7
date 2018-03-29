@@ -48,13 +48,11 @@ Efek hovernya terdiri dari Merah, Hijau, Biru
 	let input = document.querySelectorAll('input');
 	input.forEach((e,i)=>{
 		e.addEventListener('change', ()=>{
-			// let timer = setTimeout(()=>{
+
 				e.parentElement.style.transition = 'all 0.1s';
 				p.className = e.value;
 				e.parentElement.classList.add('p-3',e.value);
 
-			// }
-			// ,100);
 
 		});
 	});

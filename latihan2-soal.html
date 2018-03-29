@@ -102,24 +102,21 @@ Membuat Gallery Heroes:
 
 <script>
 	// Tulis scriptnya
-	let img = document.querySelectorAll('img');
+	let img = document.querySelectorAll('.col-sm-4>img');
 	let bigImg = document.querySelector('.big-image');
-	img.forEach((e, i)=>{
-		img[i].style.transition = 'all ease 0.2s';
-		img[i].onmouseenter = () =>{
-			bigImg.childNodes[3].innerHTML = img[i].alt;
-			bigImg.childNodes[1].src = img[i].src;
-			img[i].style.padding = '2px';
-			img[i].style.background = '#f0ad4e';
+	img.forEach((e)=>{
+		e.style.transition = 'all ease 0.2s';
+		e.onmouseenter = () =>{
+			bigImg.children[1].textContent = e.alt;
+			bigImg.children[0].src = e.src;
+			e.style.padding = '2px';
+			e.style.background = '#f0ad4e';
 		}
-		img[i].onmouseleave = ()=>{
-			img[i].style.padding = 0;
-			img[i].style.background = '#f0ad4e';
+		e.onmouseleave = ()=>{
+			e.style.padding = 0;
+			e.style.background = '#f0ad4e';
 		}
 	})
-
-	
 </script>
-
 </body>
 </html>
