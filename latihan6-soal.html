@@ -42,21 +42,22 @@ Efek hovernya terdiri dari Merah, Hijau, Biru
 
 <script>
 // Tulis Script.
-	let p = document.querySelector('p');
-	let pChild = p.children;
+	let div = document.querySelectorAll('div');
 
-	let input = document.querySelectorAll('input');
-	input.forEach((e,i)=>{
-		e.addEventListener('change', ()=>{
+	div.forEach((e, i)=>{
+		e.addEventListener('change', function(){
+			e.parentElement.children[1].className = e.firstElementChild.value;
+			
+			console.log(e.firstElementChild.id);
 
-				e.parentElement.style.transition = 'all 0.1s';
-				p.className = e.value;
-				e.parentElement.classList.add('p-3',e.value);
-
-
-		});
-	});
-
+			if(e.firstElementChild.checked){
+				e.classList.add('p-3', e.firstElementChild.value);
+				// console.log(e)
+			}else{
+				e.classList.remove('p-3', e.firstElementChild.value);
+			}
+		})
+	})
 </script>
 </body>
 </html>
